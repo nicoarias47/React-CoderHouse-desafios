@@ -1,0 +1,36 @@
+header {
+    background-color: #c4c4c8;
+    color: #f44f5a;
+    border-bottom: 1px solid #f44f5a;
+}
+
+.navbar {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.nav-item{
+    padding-left: 1rem;
+    font-size: 1rem;  
+    font-weight: 600; 
+} 
+
+.nav-link {
+    cursor: pointer; 
+}
+
+.navbar-brand  img{
+    width: 70px;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    
+}
+
+.cart-logo {
+    font-size: 1.2rem;
+}
+
