@@ -2,16 +2,22 @@ import React, {useState} from 'react'
 
 const ItemCount = () => {
     const [counter, setCounter] = useState(0) 
+    const [stock, setStock] = useState(6)
 
     const handlerCounterUp = () => {
+        if(stock > 0) {
         setCounter(counter +1)
+        setStock(stock -1)
+        }
     }
 
     const handlerCounterDown = () => {
         if(counter > 0) {
         setCounter(counter - 1)
+        setStock(stock +1)
         }
     }
+
 
 
     const styles = {
@@ -36,6 +42,7 @@ const ItemCount = () => {
     <>
         <div style={styles.count}>
             <p>Count : {counter}</p>
+            <p>Stock: {stock}</p>
             <button style={styles.countBtn} onClick={handlerCounterUp}>+</button>      
             <button style={styles.countBtn} onClick={handlerCounterDown}>-</button>      
         </div>
