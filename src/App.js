@@ -4,7 +4,7 @@ import './App.css';
 // COMPONENTS
 import Header from './components/header/navBar'
 import CardAction from './components/ItemListContainer/ItemListContainer';
-
+import ItemCount from './components/ItemCount/ItemCount';
 
 const App = () => {
   return(      
@@ -37,6 +37,9 @@ const App = () => {
           img='https://tesla-cdn.thron.com/delivery/public/image/tesla/91abd4c7-32a1-41cc-ade5-b64774dbea61/bvlatuR/std/2880x1800/Model-Y-Main-Hero-Desktop-Global?quality=auto-medium&amp;format=auto'
           />
         </div>
+        <section>
+          <ItemCount/>
+        </section>
       </div>
 
     </div>
