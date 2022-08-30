@@ -3,37 +3,35 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions } from '@mui/material';
+import {CardActionArea } from '@mui/material';
 
-const CardAction = ({name, description, topSpeed, img}) => {
+
+
+const ItemListContainer = ({data}) => {
   return (
-    <Card sx={{ maxWidth: 320 }}>
-      <CardActionArea>
+    <Card sx={{ maxWidth: 250, display: 'flex', flexWrap: 'wrap', margin: 2}}>
+      <CardActionArea >
         <CardMedia
           component="img"
-          height="140"
-          image={img}
-          alt="tesla model S"
-        />
+          height="auto"
+          image={data.image}
+          alt={data.name}  
+                
+        /> 
         <CardContent>
           <Typography variant="h5" component="div">
-            {name}
+            {data.name}
           </Typography>
-          <Typography gutterBottom variant="h9" component="div" color='#c4c4c8'>
-            {topSpeed}
+          <Typography gutterBottom variant="h9" component="div" color={data.status === "Alive" ? "green" : data.status === "Dead" ? "red" : "#c4c4c8"}>
+            {data.status}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {description}
+          <Typography variant="body2">
+            {data.species}
           </Typography>
         </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="error">
-          More
-        </Button>
-      </CardActions>
+      </CardActionArea>      
     </Card>
   );
 }
 
-export default CardAction;
+export default ItemListContainer;

@@ -155,6 +155,19 @@ componentes de clase: Eran los unicos que podian tener un state (estado)
 Ciclos de Vida:
 ***** Investigar xD ******
 
+*/
+
+
+/* 
+----- CLASE 5: Promises, asincronía y MAP -----
+map:
+
+
+
+
+
+
+
 
 
 
